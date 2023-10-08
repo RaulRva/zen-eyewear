@@ -1,0 +1,39 @@
+<div class="main-brand-ctm-section">
+  <div class="page-width">
+    <div class="main-brand-ctm-flex">
+      <div class="main-brand-ctm-left">
+        <h2 class="main-ctm-head">
+          {{ page.title }}
+        </h2>
+        {% if section.settings.image != blank %}
+          <img src="{{ section.settings.image | img_url: "master" }}" /> 
+        {% endif %}
+      </div>
+      <div class="main-brand-ctm-right">
+        <p>{{ section.settings.desc }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Brand Inner Section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Select Image"
+      },
+      {
+        "type": "textarea",
+        "id": "desc",
+        "label": "Add Description"
+      }
+    ],
+    "presets":[
+      {
+        "name": "Brand Inner Section"
+      }
+    ]
+  }
+{% endschema %}

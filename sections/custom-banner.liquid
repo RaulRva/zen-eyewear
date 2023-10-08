@@ -1,0 +1,36 @@
+<div class="page-width">
+  <div class="custom-banner-wrap">
+    <figure>
+      {% assign assign collection = collections[section.settings.collection] %}
+      <img src="{{ collection.image | img_url: "master" }}" />
+    </figure>
+    <h6>{{ collection.title }}</h6>
+    <a href="{{ collection.url }}" class="cb-btn">{{ section.settings.btntext }}</a>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Custom Banner Section",
+    "tag": "section",
+    "class": "section custom-banner",
+    "settings": [
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "Select Collection"
+      },
+      {
+        "type": "text",
+        "id": "btntext",
+        "label": "Button Label"
+      }
+    ],
+    "presets":[
+      {
+        "name": "Custom Banner Section"
+      }
+    ]
+  }
+{% endschema %}

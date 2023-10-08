@@ -1,0 +1,49 @@
+<div class="main-brand-section">
+  <div class="page-width">
+    <div class="main-brand-wrap">
+      {% for block in section.blocks %}
+        <div class="main-brand-inner">
+          <span>
+            <div class="main-brand-num">0{{ forloop.index }}</div>
+            <div class="main-brand-title">{{ block.settings.title }}</div>
+            <div class="main-brand-desc">{{ block.settings.desc }}</div>
+          </span>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Brand Section",
+    "settings": [],
+    "blocks":[
+      {
+        "type": "header",
+        "name": "brand",
+        "settings":[
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Add Title"
+          },
+          {
+            "type": "textarea",
+            "id": "desc",
+            "label": "Add Description"
+          },
+          {
+            "type": "url",
+            "id": "url",
+            "label": "Select URL"
+          }
+        ]
+      }
+    ],
+    "presets":[
+      {
+        "name": "Brand Section"
+      }
+    ]
+  }
+{% endschema %}

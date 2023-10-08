@@ -1,0 +1,62 @@
+<div class="page-width">
+  <div class="main-location">
+    <h2>{{ section.settings.heading }}</h2>
+    <div class="locaton-frame">
+      <div class="locaton-frame-info">
+        <div class="locaton-frame-info-inner">
+          <h5>G&D Optical SL</h5>
+          <p>Calle Carrer Pujades 77-79</p>
+        </div>
+        <div class="locaton-frame-info-inner"> 
+          <p>Planta 3 Local 6-8A<br>08005 Barcelona, Spain</p>
+        </div>
+        <div class="locaton-frame-info-inner"> 
+          <p>Mon - Fri, 10am - 2pm</p>
+          <p>Saturday, CLOSED</p>
+          <p>Sunday, CLOSED</p>
+          <a target="_blank" href="https://www.google.com/maps/place/C.+de+Pujades,+08005+Barcelona,+Spain/@41.399032,2.197195,14z/data=!4m6!3m5!1s0x12a4a33facb25a19:0x541cb4927b5804da!8m2!3d41.3990316!4d2.1971952!16s%2Fm%2F0drxs0x?hl=en&ent">Get directions</a>
+        </div>
+      </div>
+      <iframe id="myiFrame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10768.27905570272!2d2.1966582535918473!3d41.40025508394543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a33facb25a19%3A0x541cb4927b5804da!2sC.%20de%20Pujades%2C%2008005%20Barcelona%2C%20Spain!5e0!3m2!1sen!2sin!4v1685345530590!5m2!1sen!2sin" width="990" height="503" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="location-info">
+      <div class="location-info-inner">
+        <p>Phone</p>
+        {{ section.settings.phone }}
+      </div>
+      <div class="location-info-inner location-info-inner-mail">
+        <p>Mail</p>
+        {{ section.settings.email }}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Location Section",
+    "class": "location-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      },
+      {
+        "type": "richtext",
+        "id": "phone",
+        "label": "Add Phone Number"
+      },
+      {
+        "type": "richtext",
+        "id": "email",
+        "label": "Add Email Address"
+      }
+    ],
+    "presets":[
+      {
+        "name": "Location Section"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,368 @@
+<head>
+{{ 'parallax.css' | asset_url | stylesheet_tag }}
+    
+    <script>
+      if (sessionStorage.getItem('visited') === null) {
+        document.documentElement.classList.add("show-loader");
+      }
+    </script>    
+    <style>
+      @media screen and (max-height: 768px) {
+        .values_img-holder {
+          max-width: 20em;
+        }
+    </style>
+  </head>
+  
+    
+    <div id="smooth-wrapper" class="main-wrapper">      
+      <div id="smooth-content" class="content-wrapper is-blue">
+        <div class="content_inner">          
+          <div class="story_card-holder">            
+            <div class="values_card">
+              <div class="values-spacer"></div>
+              <div class="values_card-single card-1">
+                <div class="values_single-holder">
+                  <h3 class="values_number">01</h3>
+                  <div class="values_content">{{ section.settings.desc1 }}
+                  </div>
+                </div>
+              </div>
+              <div class="values_card-single card-2">
+                <div class="values_single-holder">
+                  <h3 class="values_number">02</h3>
+                  <div class="values_content">{{ section.settings.desc2 }}
+                  </div>
+                </div>
+              </div>
+              <div class="values_card-single card-3">
+                <div class="values_single-holder">
+                  <h3 class="values_number">03</h3>
+                  <div class="values_content">{{ section.settings.desc3 }}
+                  </div>
+                </div>
+              </div>
+              <div class="values_card-single card-4">
+                <div class="values_single-holder">
+                  <h3 class="values_number">04</h3>
+                  <div class="values_content">{{ section.settings.desc4 }}
+                  </div>
+                </div>
+              </div>
+              <div class="values_card-single card-5">
+                <div class="values_single-holder">
+                  <h3 class="values_number">05</h3>
+                  <div class="values_content">{{ section.settings.desc5 }}
+                  </div>
+                </div>
+              </div>
+              <div class="values_static">
+                <div class="values_title-track">
+                  <h3 id="comfort" class="values_flip-heading active">{{ section.settings.custom_text_title1 }}</h3>                  
+                  <h3 id="improve" class="values_flip-heading">{{ section.settings.custom_text_title2 }}</h3>
+                  <h3 id="modest" class="values_flip-heading">{{ section.settings.custom_text_title3 }}</h3>
+                  <h3 id="colour" class="values_flip-heading">{{ section.settings.custom_text_title4 }}</h3>
+                  <h3 id="balance" class="values_flip-heading">{{ section.settings.custom_text_title5 }}</h3>
+                  <h3 id="balances" class="values_flip-heading">{{ section.settings.custom_text_title5 }}</h3>
+                </div>
+                <div class="values_img-holder">
+                  <div class="image_height">
+        {% if section.settings.image1 != blank %}
+          <img src="{{ section.settings.image1 | img_url: "master" }}" loading="eager" class="values_img is-active" /> 
+        {% endif %}        
+        {% if section.settings.image2 != blank %}
+          <img src="{{ section.settings.image2 | img_url: "master" }}" loading="eager" class="values_img" /> 
+        {% endif %}
+        {% if section.settings.image3 != blank %}
+          <img src="{{ section.settings.image3 | img_url: "master" }}" loading="eager" class="values_img" /> 
+        {% endif %}
+        {% if section.settings.image4 != blank %}
+          <img src="{{ section.settings.image4 | img_url: "master" }}" loading="eager" class="values_img" /> 
+        {% endif %}
+        {% if section.settings.image5 != blank %}
+          <img src="{{ section.settings.image5 | img_url: "master" }}" loading="eager" class="values_img" /> 
+        {% endif %} 
+        {% if section.settings.image5 != blank %}
+          <img src="{{ section.settings.image5 | img_url: "master" }}" loading="eager" class="values_img" /> 
+        {% endif %} 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>                    
+        </div>
+      </div>      
+    </div>
+
+{% schema %}
+  {
+    "name": "New Brand Section",    
+    "settings": [
+      {
+        "id": "custom_text_title1",
+        "type": "text",
+        "label": "Text box heading",
+        "default": "Title"
+      },
+      {
+        "id": "custom_text_title2",
+        "type": "text",
+        "label": "Text box heading",
+        "default": "Title"
+      },
+      {
+        "id": "custom_text_title3",
+        "type": "text",
+        "label": "Text box heading",
+        "default": "Title"
+      },
+      {
+        "id": "custom_text_title4",
+        "type": "text",
+        "label": "Text box heading",
+        "default": "Title"
+      },
+      {
+        "id": "custom_text_title5",
+        "type": "text",
+        "label": "Text box heading",
+        "default": "Title"
+      },      
+      {
+        "type": "image_picker",
+        "id": "image1",
+        "label": "Select Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image2",
+        "label": "Select Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image3",
+        "label": "Select Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image4",
+        "label": "Select Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image5",
+        "label": "Select Image"
+      },      
+      {
+        "type": "textarea",
+        "id": "desc1",
+        "label": "Add Description"
+      },
+      {
+        "type": "textarea",
+        "id": "desc2",
+        "label": "Add Description"
+      },
+      {
+        "type": "textarea",
+        "id": "desc3",
+        "label": "Add Description"
+      },
+      {
+        "type": "textarea",
+        "id": "desc4",
+        "label": "Add Description"
+      },
+      {
+        "type": "textarea",
+        "id": "desc5",
+        "label": "Add Description"
+      }     
+    ],
+        "presets":[
+      {
+        "name": "New Brand Section"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>    
+   
+    <script>      
+      function pageLoad() {
+        let pl = gsap.timeline();
+        pl.to(".story_banner-img-holder", {
+          opacity: 1,
+          duration: 0.4,
+          ease: "Expo.easeOut"
+        }, 0);
+        pl.from(".story_banner-img-static", {
+          clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+          duration: 1.6,
+          ease: "Expo.easeOut"
+        });
+      } 
+
+      function storyIntro() {
+        let tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".story_banner",
+            start: "top top",
+            end: "bottom bottom",
+            pin: ".story_holder",
+            pinSpacing: true,
+            scrub: true
+          }
+        });
+        tl.from(".story_banner-img", {
+          clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+          stagger: {
+            each: 1,
+            from: "end"
+          },
+          ease: "none",
+          duration: 1
+        });
+      }
+      let mm = gsap.matchMedia();
+      // on desktop
+      mm.add("(min-width: 767px)", () => {
+        pageLoad();
+        storyIntro();
+      });
+      gsap.utils.toArray(".story_card").forEach((panel, i) => {
+        ScrollTrigger.create({
+          trigger: panel,
+          start: "top top",
+          pin: true,
+          endTrigger: $(".card-5"),
+          end: "bottom top",
+          pinSpacing: false
+        });
+      });
+      ScrollTrigger.create({
+        trigger: ".values_static",
+        start: "top top",
+        pin: true,
+        endTrigger: $(".card-5"),
+        end: "top top",
+        pinSpacing: false
+      });
+      // Run a function
+      $(".values_card-single").each(function(index) {
+        let triggerElement = $(this);
+        let myIndex = $(this).index();
+        let targetElement = $(".values_img").eq(myIndex);
+        let tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: triggerElement,
+            // trigger element - viewport
+            start: "top top",
+            end: "bottom top",
+            onEnter: () => {
+              $(".values_img").removeClass("is-active");
+              targetElement.addClass("is-active");
+            },
+            onEnterBack: () => {
+              $(".values_img").removeClass("is-active");
+              targetElement.addClass("is-active");
+            }
+          }
+        });
+      });
+      // Run a function
+      $(".values_card-single").each(function(index) {
+        let triggerElement = $(this);
+        let myIndex = $(this).index();
+        let targetElement = $(".values_flip-heading").eq(myIndex);
+        let tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: triggerElement,
+            // trigger element - viewport
+            start: "top top",
+            end: "bottom top",
+            onEnter: () => {
+              $(".values_flip-heading").removeClass("active");
+              targetElement.addClass("active");
+            },
+            onEnterBack: () => {
+              $(".values_flip-heading").removeClass("active");
+              targetElement.addClass("active");
+            }
+          }
+        });
+      });
+      // Run a function
+      $(".values-spacer").each(function(index) {
+        let triggerElement = $(this);
+        let targetElement = $(".values_flip-heading").eq(0);
+        let tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: triggerElement,
+            // trigger element - viewport
+            start: "top bottom",
+            end: "bottom top",
+            onEnter: () => {
+              $(".values_flip-heading").removeClass("active");
+              targetElement.addClass("active");
+            },
+            onEnterBack: () => {
+              $(".values_flip-heading").removeClass("active");
+              targetElement.addClass("active");
+            }
+          }
+        });
+      });
+      $(".values-spacer").each(function(index) {
+        let triggerElement = $(this);
+        let myIndex = $(this).index();
+        let targetElement = $(".values_img").eq(0);
+        let tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: triggerElement,
+            // trigger element - viewport
+            start: "top bottom",
+            end: "bottom top",
+            onEnter: () => {
+              $(".values_img").removeClass("is-active");
+              targetElement.addClass("is-active");
+            },
+            onEnterBack: () => {
+              $(".values_img").removeClass("is-active");
+              targetElement.addClass("is-active");
+            }
+          }
+        });
+      });           
+    </script> 
+    <script>
+    $(window).scroll(function(){
+    $("h3.values_flip-heading").each(function () {
+        if($(this).hasClass('active')){
+            $(document).find('.values_card').removeClass().addClass('values_card '+$(this).attr('id')); 
+        }
+    });
+});
+  </script>
+    <style>        
+
+  @media screen and (min-width: 1200px) and (max-width: 1400px) { 
+    .values_static {    
+    padding: 40px 30px!important;
+}
+   .values_flip-heading {    
+    font-size: 58px;    
+  }
+    .values_img-holder {
+    width: 27%;    
+ }
+}
+    </style>
