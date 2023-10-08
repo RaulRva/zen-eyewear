@@ -1,0 +1,181 @@
+.contact img {
+  max-width: 100%;
+}
+
+.contact .form__message {
+  align-items: flex-start;
+}
+
+.contact .icon-success {
+  margin-top: 0.2rem;
+}
+
+.contact .field {
+  margin-bottom: 1.5rem;
+}
+.contact.ctm-width {
+  max-width: 1033px;
+}
+.main-location h2,
+.contact h2.title {
+    font-family: 'TestSohne-Buch';
+    font-size: 24px;
+    line-height: 26px;
+    letter-spacing: 0.02em;
+    color: #000000;
+    margin-bottom: 46px;
+    margin-top:0;
+}
+.contact h2.title{
+  font-weight: 600;
+}
+.ctm-contact-from .contact label.field__label {
+    position: unset;
+    margin: 0 0 10px;
+    font-family: 'TestSohne-Buch';
+    font-size: 20px !important;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.02em;
+    color: #000000;
+}
+.contact .footer-block--newsletter label.field__label{
+  position:absolute;
+}
+.ctm-contact-from .contact  .field:before,.contact .field:after {
+    display: none;
+}
+.ctm-contact-from .contact .field__input {
+    border: 2px solid #000000;
+    box-shadow: none;
+    font-family: 'TestSohne-Buch';
+    font-size: 20px !important;
+    line-height: 26px;
+    letter-spacing: .02em;
+    color: #000;
+    padding: 0 15px;
+    height: 65px;
+}
+.ctm-contact-from .contact .field {
+    flex-direction: column-reverse;
+}
+.ctm-contact-from .contact .contact__fields .field__input::-webkit-input-placeholder {
+  color: #686666;
+}
+.ctm-contact-from .contact .contact__fields .field__input:-ms-input-placeholder { 
+  color: #686666;
+}
+.ctm-contact-from .contact .contact__fields .field__input::placeholder {
+  color: #686666;
+}
+.ctm-contact-from .contact .field__input:focus{
+  background: #d9d9d9;
+  border-color: #d9d9d9;
+}
+#ContactForm .text-area {
+    min-height: 256px;
+    padding-top: 15px;
+}
+#ContactForm .contact__button button.button {
+    font-family: 'TestSohne-Buch';
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    padding: 15px 124px;
+    background:#000000;
+}
+#ContactForm .field__input::placeholder{
+  opacity:1;
+}
+#ContactForm .contact__button {
+    text-align: right;
+    padding-right: 50px !important;
+}
+.main-location {
+    margin-top: 100px;
+}
+.main-location figure{
+  margin:0;
+}
+.main-location figure img {
+    max-width: 100%;
+}
+.main-location .location-info-inner p,
+.main-location .location-info-inner p a{
+  font-family: 'TestSohne-Buch';
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+.main-location .location-info-inner p a{
+  text-decoration:none;
+}
+.main-location .location-info-inner.location-info-inner-mail p a{
+  text-decoration:underline;
+}
+.main-location .location-info .location-info-inner {
+    display: flex;
+    align-items: center;
+}
+.main-location .location-info .location-info-inner p {
+    margin: 0;
+}
+.main-location .location-info .location-info-inner p:first-child {
+    width: 90px;
+}
+.main-location .location-info .location-info-inner:first-child {
+    margin-bottom: 15px;
+}
+.main-location .location-info {
+    margin-top: 30px;
+}
+@media screen and (min-width: 750px) {
+  .contact .field {
+    margin-bottom: 2rem;
+  }
+}
+
+.contact__button {
+  margin-top: 3rem;
+}
+
+@media screen and (min-width: 750px) {
+  .contact__button {
+    margin-top: 4rem;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .contact__fields {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+  }
+}
+
+@media only screen and (max-width:991px){
+  .main-location {
+    margin-top: 50px;
+  }
+  .main-location h2, .contact h2.title {
+    margin-bottom: 24px;
+  }
+  .main-location .location-info-inner p, .main-location .location-info-inner p a {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .main-location .location-info .location-info-inner:first-child {
+    margin-bottom: 10px;
+  }
+  .contact label.field__label,
+  .contact .field__input {
+    font-size: 16px!important;
+    line-height: 22px;
+  }
+  .contact .field__input {
+    height: 50px;
+  }
+}

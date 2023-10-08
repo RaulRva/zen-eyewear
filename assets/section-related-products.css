@@ -1,0 +1,12 @@
+.related-products {
+  display: block;
+}
+
+.related-products__heading {
+    margin: 0 0 3rem;
+    font-family: 'TestSohne-Buch';
+    font-size: 32px;
+    line-height: 42px;
+    letter-spacing: 0.02em;
+    color: #000000;
+}
