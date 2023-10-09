@@ -72,7 +72,7 @@
                 <div class="values_img-holder">
                   <div class="image_height">
         {% if section.settings.image1 != blank %}
-          <img src="{{ section.settings.image1 | img_url: "master" }}" loading="eager" class="values_img is-active" /> 
+          <img src="{{ section.settings.image1 | img_url: "master" }}" loading="eager" class="values_img is-active mobile-hidden" /> 
         {% endif %}        
         {% if section.settings.image2 != blank %}
           <img src="{{ section.settings.image2 | img_url: "master" }}" loading="eager" class="values_img" /> 
