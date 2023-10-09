@@ -1339,8 +1339,19 @@ span#prod-name {
 .section-collection-list .collection-list li.collection-list__item.grid__item:after {
     display: none;
 }
-@media only screen and (min-width:750px){
-  .desktop-hidden{
-    display: none;
-  }
+         
+.foot-lang{
+  display: flex;
 }
+
+  @media only screen and (min-width:750px){
+    .desktop-hidden{
+      display: none;
+    }
+  }
+  
+  @media only screen and (max-width:750px){
+    .mobile-hidden{
+      display: none;
+    }
+  }
