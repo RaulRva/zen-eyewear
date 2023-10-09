@@ -1339,6 +1339,14 @@ span#prod-name {
 .section-collection-list .collection-list li.collection-list__item.grid__item:after {
     display: none;
 }
+         
 .foot-lang{
-  display:flex;
+  display: flex;
 }
+
+  @media only screen and (max-width:750px){
+    .desktop-hidden{
+      display: none;
+    }
+  }
+  
