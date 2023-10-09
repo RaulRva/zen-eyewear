@@ -163,12 +163,12 @@
                 </li>
               {%- endfor -%}
             </ul>
-            {% if section.settings.image != blank %}
+            {% if collection.metafields.custom.custom_banner != blank %}
             <section class="shopify-section section custom-banner">
               <div class="page-width">
                 <div class="custom-banner-wrap">
                   <figure>
-                    <img src="{{ section.settings.image | img_url: "master" }}" />
+                    <img src="{{ collection.metafields.custom.custom_banner | img_url: "master" }}" />
                   </figure>
                   <h6>New Collection</h6>
                   <a href="{{ section.settings.btnurl }}" class="cb-btn">{{ section.settings.btntext }}</a>
