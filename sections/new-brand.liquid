@@ -34,9 +34,6 @@
               </div>
               <div class="values_card-single card-2">
                 <div class="values_single-holder">
-                  {% if section.settings.image2 != blank %}
-                    <img src="{{ section.settings.image2 | img_url: "master" }}" loading="eager" class="values_img desktop-hidden" /> 
-                  {% endif %}
                   <h3 class="values_number">02</h3>
                   <div class="values_content">{{ section.settings.desc2 }}
                   </div>
