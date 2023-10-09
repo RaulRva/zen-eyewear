@@ -34,6 +34,9 @@
               </div>
               <div class="values_card-single card-2">
                 <div class="values_single-holder">
+                  {% if section.settings.image2 != blank %}
+                    <img src="{{ section.settings.image2 | img_url: "master" }}" loading="eager" class="values_img desktop-hidden" /> 
+                  {% endif %}
                   <h3 class="values_number">02</h3>
                   <div class="values_content">{{ section.settings.desc2 }}
                   </div>
@@ -41,6 +44,9 @@
               </div>
               <div class="values_card-single card-3">
                 <div class="values_single-holder">
+                  {% if section.settings.image3 != blank %}
+                    <img src="{{ section.settings.image3 | img_url: "master" }}" loading="eager" class="values_img desktop-hidden" /> 
+                  {% endif %}
                   <h3 class="values_number">03</h3>
                   <div class="values_content">{{ section.settings.desc3 }}
                   </div>
@@ -48,6 +54,9 @@
               </div>
               <div class="values_card-single card-4">
                 <div class="values_single-holder">
+                  {% if section.settings.image4 != blank %}
+                    <img src="{{ section.settings.image4 | img_url: "master" }}" loading="eager" class="values_img desktop-hidden" /> 
+                  {% endif %}
                   <h3 class="values_number">04</h3>
                   <div class="values_content">{{ section.settings.desc4 }}
                   </div>
@@ -55,6 +64,9 @@
               </div>
               <div class="values_card-single card-5">
                 <div class="values_single-holder">
+                  {% if section.settings.image5 != blank %}
+                    <img src="{{ section.settings.image5 | img_url: "master" }}" loading="eager" class="values_img desktop-hidden" /> 
+                  {% endif %} 
                   <h3 class="values_number">05</h3>
                   <div class="values_content">{{ section.settings.desc5 }}
                   </div>
