@@ -24,6 +24,9 @@
               <div class="values-spacer"></div>
               <div class="values_card-single card-1">
                 <div class="values_single-holder">
+                  {% if section.settings.image1 != blank %}
+                    <img src="{{ section.settings.image1 | img_url: "master" }}" loading="eager" class="desktop-hidden" /> 
+                  {% endif %} 
                   <h3 class="values_number">01</h3>
                   <div class="values_content">{{ section.settings.desc1 }}
                   </div>
