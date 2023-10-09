@@ -1339,4 +1339,6 @@ span#prod-name {
 .section-collection-list .collection-list li.collection-list__item.grid__item:after {
     display: none;
 }
-         
+.foot-lang{
+  display:flex;
+}
