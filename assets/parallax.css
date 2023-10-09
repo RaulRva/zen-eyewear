@@ -10485,8 +10485,8 @@ figure {
 .values_card.balances {
     background-color: #E9CEB9;
 }
-        .values-spacer {
-    min-height: 100vh;
+.values-spacer {
+    min-height: 15vh;
     display: block!important;
 }
       .values_card-single.card-1 .values_single-holder {
