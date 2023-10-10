@@ -182,7 +182,7 @@
           <a class="breadcrumbs__link" href="{{ page.url }}" aria-current="page">{{ page.title }}</a>
         </li>
       {%- when 'product' -%}
-        {% for bread in product.metafields.custom.breadcrumbs.value %}
+        {% for bread in product.metafields.custom.breadcrumb.value %}
           <li class="breadcrumbs-list__item">
             <a class="text02" href="{{ bread.url }}">{{ bread.title | escape }}</a> /
           </li>
