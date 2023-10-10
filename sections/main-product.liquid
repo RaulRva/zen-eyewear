@@ -182,19 +182,19 @@
           <a class="breadcrumbs__link" href="{{ page.url }}" aria-current="page">{{ page.title }}</a>
         </li>
       {%- when 'product' -%}
-        {%- if collection.url -%}
-          <li class="breadcrumbs__item">
-            {{ collection.title | link_to: collection.url }}
-          </li>
-        {%- endif -%}
-      {% for collection in product.collections %}
-      {% assign title = collection.handle | capitalize %}
-        {% unless collection.handle == 'frontpage' %}
-            <li class="breadcrumbs__item ">
-              <a class="breadcrumbs__link" href="{{ collection.url }}" aria-current="page">{{ title | replace:'-'," " }}</a>
+        {% for bread in product.metafields.custom.breadcrumbs.value %}
+          {%- if show_collection_listing_link -%}
+            <li class="breadcrumbs-list__item">
+              <a class="text02" href="{{ bread.url }}">{{ bread.title | escape }}</a> {{ divider }}
             </li>
-        {% endunless %}
+          {%- endif -%}
+          <li class="breadcrumbs-list__item">
+            <a class="text02" href="{{ bread.url }}">{{ bread.title | escape }}</a> {{ divider }}
+          </li>
       {% endfor %}
+      <li class="breadcrumbs-list__item">
+        <a class="text01" href="{{ product.url }}" aria-current="page">{{ product.metafields.rocket.product_short_name | escape }}</a>
+      </li>
         <!-- <li class="breadcrumbs__item">
           <a class="breadcrumbs__link" href="{{ product.url }}" aria-current="page">{{ product.title }}</a>
         </li> -->
