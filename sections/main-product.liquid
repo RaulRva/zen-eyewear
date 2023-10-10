@@ -241,15 +241,15 @@
   </ol>
 </nav>
 {%- endunless -%}
-              {% comment %} <p
+              <p
                 class="product__sku no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
                 id="Sku-{{ section.id }}"
                 role="status"
                 {{ block.shopify_attributes }}
-              > {% endcomment %}
-                {% comment %} <span >{{ 'products.product.sku' | t }}:</span> {{- product.selected_or_first_available_variant.sku -}}
+              >
+                <span >{{ 'products.product.sku' | t }}:</span> {{- product.selected_or_first_available_variant.sku -}}
               </p> 
-              </div> {% endcomment %}
+              </div>
             {%- when 'custom_liquid' -%}
               {{ block.settings.custom_liquid }}
             {%- when 'collapsible_tab' -%}
