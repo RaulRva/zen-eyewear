@@ -183,13 +183,8 @@
         </li>
       {%- when 'product' -%}
         {% for bread in product.metafields.custom.breadcrumbs.value %}
-          {%- if show_collection_listing_link -%}
-            <li class="breadcrumbs-list__item">
-              <a class="text02" href="{{ bread.url }}">{{ bread.title | escape }}</a> {{ divider }}
-            </li>
-          {%- endif -%}
           <li class="breadcrumbs-list__item">
-            <a class="text02" href="{{ bread.url }}">{{ bread.title | escape }}</a> {{ divider }}
+            <a class="text02" href="{{ bread.url }}">{{ bread.title | escape }}</a> /
           </li>
       {% endfor %}
       <li class="breadcrumbs-list__item">
