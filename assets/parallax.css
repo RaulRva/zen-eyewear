@@ -7710,6 +7710,12 @@ figure {
   min-height: 100vh;
 }
 
+@media screen and (max-width: 750px) { 
+    .values-spacer {
+  min-height: 20vh!important;
+}
+}
+
 .contact_foot-text_link {
   text-align: left;
   margin-bottom: 0;
@@ -10562,10 +10568,5 @@ figure {
     font-size: 20px;
     line-height: 26px;
     font-weight: 400;
- }
-}
-@media screen and (max-width: 750px) { 
-    .values-spacer {
-    min-height:20vh;
  }
 }
