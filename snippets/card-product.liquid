@@ -97,7 +97,7 @@
                 >
               {%- endif -%}
           <a href="{{ card_product.url | within: collection }}" class="grid-image">
-            <img class="feature-images" src="{{ card_product.featured_image.src | product_img_url: 'large' }}" alt="{{ card_product.featured_image.alt | escape }}">
+            <img class="feature-images" src="{{ card_product.selected_variant.image | product_img_url: 'large' }}" alt="{{ card_product.featured_image.alt | escape }}">
           </a>
               
             </div>
