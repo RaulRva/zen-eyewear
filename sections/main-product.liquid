@@ -250,9 +250,9 @@
                 role="status"
                 {{ block.shopify_attributes }}
               > {% endcomment %}
-                <span >{{ 'products.product.sku' | t }}:</span> {{- product.selected_or_first_available_variant.sku -}}
+                {% comment %} <span >{{ 'products.product.sku' | t }}:</span> {{- product.selected_or_first_available_variant.sku -}}
               </p> 
-              </div>
+              </div> {% endcomment %}
             {%- when 'custom_liquid' -%}
               {{ block.settings.custom_liquid }}
             {%- when 'collapsible_tab' -%}
