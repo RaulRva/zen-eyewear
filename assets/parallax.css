@@ -10564,3 +10564,8 @@ figure {
     font-weight: 400;
  }
 }
+@media screen and (max-width: 750px) { 
+    .values-spacer {
+    min-height:20vh;
+ }
+}
