@@ -189,9 +189,13 @@
         {%- endif -%}
       {% for collection in product.collections %}
       {% assign title = collection.handle | capitalize %}
+      {% assign product_title = product.title | capitalize %}
         {% unless collection.handle == 'frontpage' %}
             <li class="breadcrumbs__item ">
               <a class="breadcrumbs__link" href="{{ collection.url }}" aria-current="page">{{ title | replace:'-'," " }}</a>
+            </li>
+            <li class="breadcrumbs__item ">
+              <a class="breadcrumbs__link" href="{{ product.url }}" aria-current="page">{{ product.title }}</a>
             </li>
         {% endunless %}
       {% endfor %}
