@@ -1360,3 +1360,8 @@ span#prod-name {
       gap: 25px;
     }
   }
+
+  .breadcrumbs__list {
+    display: flex;
+    gap: 10px;
+}
