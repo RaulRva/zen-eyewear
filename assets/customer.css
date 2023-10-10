@@ -1340,9 +1340,6 @@ span#prod-name {
     display: none;
 }
          
-.foot-lang{
-  display: flex;
-}
 
   @media only screen and (min-width:750px){
     .desktop-hidden{
