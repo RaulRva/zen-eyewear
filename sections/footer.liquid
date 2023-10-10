@@ -272,6 +272,14 @@
               <button class="button button--tertiary">{{ 'localization.update_country' | t }}</button>
             {%- endform -%}
           </noscript>
+          <localization-form>
+            {%- form 'localization', id: 'FooterCountryForm', class: 'localization-form' -%}
+              <div class="no-js-hidden">
+                <h2 class="caption-large text-body" id="FooterCountryLabel">{{ 'localization.country_label' | t }}</h2>
+                {%- render 'country-localization', localPosition: 'FooterCountry' -%}
+              </div>
+            {%- endform -%}
+          </localization-form>
         {%- endif -%}
 
         {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
@@ -374,23 +382,21 @@
         </div>
       </div>
       <div class="foot-lang">
-                  {{ 'localization.language_label' | t }}
-
         {% include 'gtranslate' %}
-        {%- if section.settings.enable_country_selector or section.settings.enable_language_selector -%}
-          <script src="{{ 'localization-form.js' | asset_url }}" defer="defer"></script>
-          <script>
-               /* $(document).ready(function() {
-                    // Use jQuery to hide the Privacy Policy menu item
-                    $("a[href='/pages/privacy-policy']").closest("li").hide();
-                });*/
-            </script>
-        {%- endif -%}
       </div>
     </div>
   </div>
 </footer>
 
+{%- if section.settings.enable_country_selector or section.settings.enable_language_selector -%}
+  <script src="{{ 'localization-form.js' | asset_url }}" defer="defer"></script>
+  <script>
+       /* $(document).ready(function() {
+            // Use jQuery to hide the Privacy Policy menu item
+            $("a[href='/pages/privacy-policy']").closest("li").hide();
+        });*/
+    </script>
+{%- endif -%}
 {% schema %}
 {
   "name": "t:sections.footer.name",
