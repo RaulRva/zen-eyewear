@@ -171,7 +171,9 @@
                     <img src="{{ collection.metafields.custom.custom_banner | img_url: "master" }}" />
                   </figure>
                   <h6>New Collection</h6>
-                  <a href="{{ collection.metafields.custom.custom_link }}" class="cb-btn">{{ section.settings.btntext }}</a>
+                  {% if collection.metafields.custom.custom_link != blank %}
+                    <a href="{{ collection.metafields.custom.custom_link }}" class="cb-btn">{{ section.settings.btntext }}</a>
+                  {% endif %}
                 </div>
               </div>
             </section>
