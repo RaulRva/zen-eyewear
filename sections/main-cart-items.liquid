@@ -70,6 +70,7 @@
 
             <tbody>
               {%- for item in cart.items -%}
+                {% if item.handle == 'store-pickup-app'%}
                 <tr  data-hulkapps-lineitem class="cart-item" id="CartItem-{{ item.index | plus: 1 }}">
                   <td class="cart-item__media">
                     {% if item.image %}
@@ -129,7 +130,6 @@
                             </div>
                           {%- endfor -%}
                         {%- endif -%}
-                        store-pickup-app
 <span  data-hulkapps-line-properties  data-hulkapps-line-properties data-hulkapps-line-properties>
                         {%- for property in item.properties -%}
                           {%- assign property_first_char = property.first | slice: 0 -%}
@@ -345,6 +345,7 @@
                     </div>
                   </td>
                 </tr>
+              {%- endif -%}
               {%- endfor -%}
             </tbody>
           </table>
