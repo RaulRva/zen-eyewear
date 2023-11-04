@@ -70,7 +70,8 @@
 
             <tbody>
               {%- for item in cart.items -%}
-                {% if item.handle == 'store-pickup-app'%}
+                {% if item.handle == 'store-pickup-app' %}
+                  <script>console.log('TEEEEEST')</script>
                 <tr  data-hulkapps-lineitem class="cart-item" id="CartItem-{{ item.index | plus: 1 }}">
                   <td class="cart-item__media">
                     {% if item.image %}
