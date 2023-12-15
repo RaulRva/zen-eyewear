@@ -3929,3 +3929,11 @@ body.template-cart #shopify-section-template--19279822881057__cart-items h1.titl
     color: #000;
     margin: 0;
 }
+
+.foot-lang{
+  display:flex
+}
+
+.price--hide{
+  display: none;
+}
