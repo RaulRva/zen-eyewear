@@ -251,7 +251,7 @@
 
   <body class="gradient template-{{ template.name }} {{ page.title | downcase }}">
     <script>
-      console.log("TEEEEEEST", '{{ marke.handle | json }}')
+      console.log("TEEEEEEST", '{{ localization.market.handle | json }}')
       stores.sort(function(a, b){
         if(a.name < b.name) { return -1; }
         if(a.name > b.name) { return 1; }
