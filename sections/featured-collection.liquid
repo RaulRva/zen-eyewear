@@ -82,7 +82,8 @@
               show_vendor: section.settings.show_vendor,
               show_rating: section.settings.show_rating,
               show_quick_add: section.settings.enable_quick_add,
-              section_id: section.id
+              section_id: section.id,
+              price: section.settings.enable_price
             %}
           </li>
         {%- else -%}
@@ -263,6 +264,12 @@
       "id": "enable_desktop_slider",
       "label": "t:sections.featured-collection.settings.enable_desktop_slider.label",
       "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_price",
+      "label": "Show price",
+      "default": true
     },
     {
       "type": "select",
